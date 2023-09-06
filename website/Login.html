@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN IN</title>
+    <style>
+.form{
+
+width:250px;
+height: 380px;
+background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+text-align: center;
+border-radius:10px ;
+border-radius: 10px;
+padding: 20px;
+
+}
+.form h2{
+width: 220px;
+font-family: sans-serif;
+text-align: center;
+color: #ff7200;
+font-size: 22px;
+background-color: #fff;
+border-radius: 10px;
+margin: 2px;
+padding: 8px;
+text-align: center;
+
+}
+.form input{
+width: 240px;
+height: 35px;
+background: transparent;
+border-bottom: none;
+border-left:none;
+border-right: none;
+color:#fff;
+font-size: 15px;
+letter-spacing: 1px;
+margin-top: 30px;
+font-family:sans-serif ;
+text-align: center;
+}
+.form input:focus{
+outline:none;
+}
+::placeholder{
+color:#fff;
+font-family: Arial;
+
+
+}
+.btn{
+width:240px ;
+height: 40px;
+background: #ff7200;
+border: none;
+margin-top: 30px;
+font-size: 18px;
+border-radius: 10px;
+cursor: pointer;
+color: #fff;
+
+text-align: center;
+
+}
+.btnn:hover{
+background: #fff;
+color: #ff7200;
+}
+
+
+
+    </style>
+    <script> 
+
+        const form= document.querySelector('#form');
+        const email= document.querySelector('#email');
+        const password= document.querySelector('#password');
+    
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        checkInput();
+    
+    })
+    function checkInput(){
+        const email=email.value.trim();
+        const password=password.value.trim();
+         if(email=='')
+         {
+            setError(email,'email cannot be blank');
+         }
+         else{
+            setSucess(email);
+         }
+    
+    
+    
+    
+     if(password=='')
+         {
+            setError(password,'password cannot be blank');
+         }
+         else{
+            setSucess(password);
+         }
+    
+    }
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <div class="form">
+        <h2>Login Here </h2>
+        <input type ="email" name="email" placeholder="Enter Email Here">
+        <input type="password" name="password" placeholder="Enter password Here">
+        
+    <button class="btn"><a href="web.html">Login</a></button>
+
+    <a href="#">Sign Up here</a>
+    <p class="liw">Log in with </p >
+    <button class="cn"><a herf="">JOIN US</a></button>
+</div>  
+</body>
+</html>
